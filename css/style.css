@@ -872,4 +872,9 @@ Parallax
 		font-size: 20px;
 	}
 	
+	#about .boxed-grey {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
 }
