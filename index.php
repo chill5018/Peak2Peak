@@ -9,7 +9,7 @@
 			
     $body = "From: $name\n E-Mail: $email\n Message:\n $message";
 				
-    if ($_POST['submit'] && $human == '4') {				 
+    if ($_POST['submit'] /* && $human == '4') */ {				 
         if (mail ($to, $subject, $body, $from)) { 
 	    echo '<p>Your message has been sent!</p>';
 	} else { 
