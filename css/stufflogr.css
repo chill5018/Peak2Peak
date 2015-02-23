@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+
+/* ===========================
+--- Intro
+============================ */
+.intro {
+	width:100%;
+	position:relative;
+	
+	background: url(../imgs/Stuff-Logr-Banner2.jpeg) no-repeat center;
+}
+
+#intro.intro {
+	padding:20% 0 0 0;
+	width: 100%;
+	min-height: 650px;
+}
+
+
