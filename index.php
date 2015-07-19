@@ -1,21 +1,17 @@
 <?php
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-    $from = 'From: TangledDemo'; 
-    $to = 'info@peak2peakmedia.com'; 
-    $subject = 'Hello';
-//     $human = $_POST['human'];
-			
-    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-				
-    if ($_POST['submit'] /* && $human == '4') */ {				 
-        if (mail ($to, $subject, $body, $from)) { 
-	    echo '<p>Your message has been sent!</p>';
-	} else { 
-	    echo '<p>Something went wrong, go back and try again!</p>'; 
-	} 
-    } else if ($_POST['submit'] && $human != '4') {
-	echo '<p>You answered the anti-spam question incorrectly!</p>';
-    }
+$fname = $_POST['fname'];
+$lname = $_POST['lname'];
+$email = $_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
+
+//Sending Email to form owner
+$header = "From: $email\n"
+. "Reply-To: $email\n";
+$subject = "subject: $subject";
+$email_to = "info@peak2peakmedia.com";
+$message = "name: $fname . $lname\n"
+. "email: $email\n";
+mail($email_to, $subject ,$message ,$header ) ;
+
 ?>
